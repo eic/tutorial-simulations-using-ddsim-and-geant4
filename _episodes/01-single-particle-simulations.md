@@ -83,7 +83,7 @@ PrimaryHandler   INFO  +++++ G4PrimaryVertex at (+0.00e+00,+0.00e+00,+0.00e+00) 
 ParticleHandler  INFO  +++ Event 0 Begin event action. Access event related information.
 ```
 
-You will notice that the particle gun has reverted to a default particle in a default direction: a 10 GeV muon in the positive z direction. That is, of course, not going to result in many hits in our EPIC detector... We will now take a closer look at some of the particle gun options.
+You will notice that the particle gun has reverted to a default particle in a default direction: a 10 GeV muon in the positive z direction. That is, of course, not going to result in many hits in our ePIC detector... We will now take a closer look at some of the particle gun options.
 ```console
   --gun.energy GUN.ENERGY
   --gun.particle GUN.PARTICLE
@@ -125,7 +125,7 @@ While many of the options have straighforward names, others may be more confusin
 $ ddsim --steeringFile steering.py --compactFile $DETECTOR_PATH/$DETECTOR_CONFIG.xml -G -N 10 --gun.thetaMin "3*deg" --gun.thetaMax "45*deg" --gun.distribution "cos(theta)" --gun.momentumMin "1*GeV" --gun.momentumMax "10*GeV" --gun.particle "pi+"
 ```
 
-> Note: Avoid the use of the `gun.energy` option, since it is inherently more ambiguous than `gun.momentum`.
+> Note: Avoid the use of the `gun.energy` option, since it is inherently more ambiguous than `gun.momentum` for massive particles (in the context of EIC).
 {: .callout}
 
 Note how we pass arguments with units in this example. The double quotes are in many cases necessary on the command line to avoid having the `*` be expanded by your shell. In the python steering file they can be ommitted and one can simply write, e.g., `SIM.gun.thetaMin = 3*deg`.
@@ -156,6 +156,8 @@ The command line option to use to specify the output file is the `--outputFile` 
 ```console
 $ ddsim --steeringFile ee_1GeV_10GeV_EndcapN.py --compactFile $DETECTOR_PATH/$DETECTOR_CONFIG.xml --numberOfEvents 10 --outputFile ee_1GeV_10GeV_EndcapN_1e1.edm4hep.root
 ```
+> Note: The extension `.edm4hep.root` of the output file is important since `ddsim` infers the output file type from the extension.
+{: .callout}
 
 Let's take a look at the output file in ROOT (you can do this inside or outside the container, depending on your system and facility with opening ROOT browsers).
 ```console
@@ -170,6 +172,9 @@ TFile**         ee_1GeV_10GeV_EndcapN_1e1.edm4hep.root  data file
   KEY: TTree    col_metadata;1  Collection metadata tree
 ```
 All EDM4hep files will have the same structure. We focus here on the `events` tree (if you see `EVENT`, in capital letters, you will need to ensure that you are indeed using the `.edm4hep.root` extension).
+
+> Note: In a future version of `ddsim` the output file format will change slightly, and the various `metatadata` trees will not be there anymore.
+{: .callout}
 
 ### `MCParticles`
 
@@ -193,3 +198,4 @@ The second set of branches that are important, and that are used as input to the
 > - Verify that the total number of entries is consistent with the multiplicity and number of events you have simulated.
 > - Plot the deposited energy of the hits in the endcap Ecal and compare the number of hits in the positive and negative endcaps.
 {: .challenge}
+

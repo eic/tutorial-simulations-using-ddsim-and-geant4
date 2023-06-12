@@ -12,7 +12,7 @@ keypoints:
 ---
 We now move on to running simulations on HepMC3 event input files from (in this case) Pythia8. The large input files for simulation campaigns are stored on S3, but the `eic-shell` environment contains the Minio cient `mc` to access them. We first need to set up our access credentials, though:
 ```console
-mc config host add S3 https://dtn01.sdcc.bnl.gov:9000 $S3_ACCESS_KEY $S3_SECRET_KEY
+mc config host add S3 https://eics3.sdcc.bnl.gov:9000 $S3_ACCESS_KEY $S3_SECRET_KEY
 mc ls S3/eictest/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc
 ```
 
@@ -47,3 +47,4 @@ You can run `npsim` exactly as you would run `ddsim`.
 > - Rerun the previous Pythia8 simulation with `npsim`, and notice any difference in running time. Because of the addition of optical photon physics, the simulation will run more slowly.
 > - Open the output file and verify that more hits (from optical photons with PDG code -22) are stored in the hits branches for the relevant RICH detector.
 {: .challenge}
+
