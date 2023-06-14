@@ -29,6 +29,13 @@ We can now specify this HepMC3 input file as input to `ddsim`:
 ddsim --compactFile $DETECTOR_PATH/$DETECTOR_CONFIG.xml --numberOfEvents 10 --inputFiles pythia8NCDIS_10x100.hepmc --outputFile pythia8NCDIS_10x100.edm4hep.root
 ```
 
+Instead of downloading files, we can also request events on-demand from the publicly accessible EIC XRootD server, but in this case we must use the `hepmc3.tree.root` input file extension:
+```console
+ddsim --compactFile $DETECTOR_PATH/$DETECTOR_CONFIG.xml --numberOfEvents 10 --inputFiles root://dtn-eic.jlab.org//work/eic2/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc3.tree.root --outputFile pythia8NCDIS_10x100.edm4hep.root
+```
+> Note: Many files on S3 under the `S3/eictest/EPIC` location are mirrored on XRootD under the `root://dtn-eic.jlab.org//work/eic2/EPIC` location. Note the use of the double slash in this URI!
+{: .callout}
+
 # NPSim as an alternative to `ddsim`
 
 Since some of the options that we pass to `ddsim` can only be provided through a steering file (such as python functions), or are otherwise cumbersome to provide on the command line, we provide `npsim` as a layer on top of `ddsim` that has these options pre-configured. This is as if you would take your steering file options and contribute them back to a central location for others to use them.
