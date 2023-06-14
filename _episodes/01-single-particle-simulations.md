@@ -193,7 +193,7 @@ Another approach which is sometimes useful to reduce the number of 'other' parti
 The second set of branches that are important, and that are used as input to the event reconstruction framework, are the `*Hits` branches. These branches include the hits in sensitive detectors: either tracker hits or calorimeter hits. You will notice that these two different types of hits contain slightly different information.
 
 > Exercise:
-> - Open the file `ee_1GeV_10GeV_EndcapN_1e1.edm4hep.root` which you just created in ROOT or a [jsroot instance](https://root.cern/js/latest/).
+> - Open the file `ee_1GeV_10GeV_EndcapN_1e1.edm4hep.root` which you just created in a local ROOT installation or online at [https://root.cern/js/latest](https://root.cern/js/latest).
 > - Plot the z component of the momentum for generated particles only and verify that this is indeed negative for particles going towards the negative endcap.
 > - Verify that the total number of entries is consistent with the multiplicity and number of events you have simulated.
 > - Plot the deposited energy of the hits in the endcap Ecal and compare the number of hits in the positive and negative endcaps.
