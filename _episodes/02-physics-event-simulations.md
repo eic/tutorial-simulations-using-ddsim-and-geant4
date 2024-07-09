@@ -81,7 +81,7 @@ We can now run the output files through the `ddsim` simulation as before.
 
 Since some of the options that we pass to `ddsim` can only be provided through a steering file (such as python functions), or are otherwise cumbersome to provide on the command line, we provide `npsim` as a layer on top of `ddsim` that has these options pre-configured. This is as if you would take your steering file options and contribute them back to a central location for others to use them.
 
-`npsim` can be easily interpreted (since it has sections that look exactly like the steering file). We can look at its python source code, located at `/usr/local/bin/npsim.py` in the `eic-shell` environment.
+`npsim` can be easily interpreted (since it has sections that look exactly like the steering file). We can look at its python source code, located at `/opt/local/bin/npsim.py` in the `eic-shell` environment.
 
 Currently `npsim` has the following additional options:
 - Cerenkov and optical photon physics are added through a python setup function,
