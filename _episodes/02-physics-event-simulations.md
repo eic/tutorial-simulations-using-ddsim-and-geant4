@@ -35,8 +35,6 @@ Instead of downloading files, we can also request events on-demand from the publ
 ```console
 ddsim --compactFile $DETECTOR_PATH/$DETECTOR_CONFIG.xml --numberOfEvents 10 --inputFiles root://dtn-eic.jlab.org//work/eic2/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc3.tree.root --outputFile pythia8NCDIS_10x100.edm4hep.root
 ```
-> Note: Many files on S3 under the `S3/eictest/EPIC` location are mirrored on XRootD under the `root://dtn-eic.jlab.org//work/eic2/EPIC` location. Note the use of the double slash in this URI!
-{: .callout}
 
 # Creating your own input files
 
