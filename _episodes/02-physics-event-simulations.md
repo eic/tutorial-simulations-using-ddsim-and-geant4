@@ -14,18 +14,16 @@ We now move on to running simulations on HepMC3 event input files from (in this 
 
 # Using centrally produced input files  
 
-The large input files for simulation campaigns are stored on S3, but the `eic-shell` environment contains the Minio cient `mc` to access them. We first need to set up our access credentials, though:
+The large input files for simulation campaigns are stored on xrootd, but the `eic-shell` environment allows us to access them. We can connect to the server and take a look at the file:
 ```console
-mc config host add S3 https://eics3.sdcc.bnl.gov:9000 $S3_ACCESS_KEY $S3_SECRET_KEY
-mc ls S3/eictest/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc
+xrdfs root://dtn-eic.jlab.org
+ls /volatile/eic/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc
+exit
 ```
 
-> Note: The values for `$S3_ACCESS_KEY` and `$S3_SECRET_KEY` will be provided in the tutorial, but are not provided here.
-{: .callout}
-
-You will notice that the input file is large (GBs). For this tutorial we only need the first few thousand lines:
+This input file is large (GBs). For this tutorial we only need the first few thousand lines. We can do this for the first 20000 lines using the following command:
 ```console
-mc head -n 20000 S3/eictest/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc > pythia8NCDIS_10x100.hepmc
+xrdfs root://dtn-eic.jlab.org cat /volatile/eic/EPIC/Tutorials/pythia8NCDIS_10x100_minQ2=1_beamEffects_xAngle=-0.025_hiDiv.hepmc | head -n 20000 > pythia8NCDIS_10x100.hepmc
 ```
 
 We can now specify this HepMC3 input file as input to `ddsim`:
