@@ -9,6 +9,7 @@ objectives:
 - "`npsim` can be used as an alternative for simulations with optical photons."
 keypoints:
 - "`ddsim` or `npsim` are both able to simulate physics events."
+- "**`npsim` should be used in almost all regular use cases for ePIC simulations**" 
 ---
 We now move on to running simulations on HepMC3 event input files from (in this case) Pythia8.
 
@@ -92,6 +93,6 @@ You can run `npsim` exactly as you would run `ddsim`.
 > - Open the output file and verify that more hits (from optical photons with PDG code -22) are stored in the hits branches for the relevant RICH detector.
 {: .challenge}
 
-> For most full physics analyses, the use of `npsim` is preferred. The performance of some detector systems, including Cerekov detectors as mentioned above, will be very different if `ddpsim` is used. Similiarly, trackers and calorimeters may appear to perform very differently. For rapid testing where detailed results, or any detectors where otpical photons are irrelevant, the use of `ddpsim` may be fine though.
+> For most full physics analyses, the use of `npsim` is strongly preferred. The performance of some detector systems, including Cherenkov detectors as mentioned above, will be very different if `ddsim` is used. Similarly, trackers and calorimeters may appear to perform very differently. For some specialist use cases, `ddsim` may be preferred. If you are unsure whether such cases apply, use `npsim` when running your simulations.
 {: .callout}
 

@@ -13,7 +13,7 @@ keypoints:
 ---
 In this first episode we will go through the running of single particle events with `ddsim`, using the built-in event generator of `ddsim`. This is the quickest way so run some straightforward tests of the geometry and produce output hits in the detectors for further analysis.
 
-> You may also see reference to using `npsim` in some tutorials. We will discuss the difference between `ddsim` and `npsim`, along with cases where one should be used over the other, in the next episode of this tutorial.
+> You may also see reference to using `npsim` in some tutorials. We will discuss the difference between `ddsim` and `npsim`, along with cases where one should be used over the other, in the next episode of this tutorial. As a brief overview, `npsim` is `ddsim` under the hood which is itself, predominantly Geant4 under the hood. We will start with `ddsim` simply to demonstrate usage.
 {: .callout}
 
 ## Passing options to `ddsim`
