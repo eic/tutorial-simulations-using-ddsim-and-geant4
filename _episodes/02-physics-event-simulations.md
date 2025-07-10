@@ -93,6 +93,6 @@ You can run `npsim` exactly as you would run `ddsim`.
 > - Open the output file and verify that more hits (from optical photons with PDG code -22) are stored in the hits branches for the relevant RICH detector.
 {: .challenge}
 
-> For most full physics analyses, the use of `npsim` is strongly preferred. The performance of some detector systems, including Cerekov detectors as mentioned above, will be very different if `ddpsim` is used. Similiarly, trackers and calorimeters may appear to perform very differently. For some specialist use cases, `ddsim` may be preferred. If you are unsure whether such cases apply, use `npsim` when running your simulations.
+> For most full physics analyses, the use of `npsim` is strongly preferred. The performance of some detector systems, including Cherenkov detectors as mentioned above, will be very different if `ddsim` is used. Similarly, trackers and calorimeters may appear to perform very differently. For some specialist use cases, `ddsim` may be preferred. If you are unsure whether such cases apply, use `npsim` when running your simulations.
 {: .callout}
 
