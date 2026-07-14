@@ -133,10 +133,16 @@
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/_layouts/workshop.html</loc>
   </url>
   <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/aio.html</loc>
+  </url>
+  <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/citation.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/images.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/index.html</loc>
@@ -157,19 +163,37 @@
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/citation.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/key-points.html</loc>
   </url>
   <url>
     <loc>https://eic.github.io/tutorial-simulations-using-npsim-and-geant4/profiles.html</loc>
